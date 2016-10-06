@@ -7,13 +7,13 @@ using System.Windows.Data;
 
 namespace CommandingAndBindingDemo
 {
-    class DegreesToAngleConverter : IValueConverter
+    class DegreesConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
             //In deze methode converteer ik de temperatuur naar de juiste hoek voor het plaatje zodat de temp overeenkomt.
             double result = (double)value;
-            return result * 2.30 - 63.049;
+            return result * 2.5;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
